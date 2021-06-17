@@ -17,6 +17,7 @@
                     <h4 class="ml-8 ">{{ $post->caption }}</h4>
                     <h4 class="ml-8 ">{{ $post->location }}</h4>
                     <h4 class="ml-8 ">{{ $post->budget }}</h4>
+                    <h4 class="ml-8 ">{{ $post->description }}</h4>
                         
                 </div>
             </div>
