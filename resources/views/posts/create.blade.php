@@ -101,6 +101,16 @@
                         </span>
                     @enderror    
                 </div>
+                <div class="form-group row">
+                    <label for="description" class="col-md-4 col-form-label">description</label>
+                    <input id="description" type="text" class="form-control @error('description') is-invalid 
+                        @enderror" name="description" value="{{ old('description') }}"  autocomplete="description" autofocus>   
+                    @error('description')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror    
+                </div>
 
                 <div class="form-group row">
                     <label for="budget" class="col-md-4 col-form-label">Estimated Budget</label>

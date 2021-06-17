@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('image');
             $table->integer('budget');
             $table->string('location');
+            $table->string('description');
 
 
             $table->timestamps();
