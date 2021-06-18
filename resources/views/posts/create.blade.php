@@ -41,10 +41,17 @@
             </div>
 
             <div class="mt-4">
+                <x-label for="contact" :value="__('Contact details')" />
+
+                <x-input id="contact" class="block mt-1 w-full" type="text" name="contact" :value="old('contact')" required />
+            </div>
+
+            <div class="mt-4">
                 <x-label for="budget" :value="__('Estimated Budget')" />
 
                 <x-input id="budget" class="block mt-1 w-full" type="text" name="budget" :value="old('budget')" required />
             </div>
+            
 
             <div class="row">
                 <label for="image" class="col-md-4 col-form-label">Project Preview Image</label>
