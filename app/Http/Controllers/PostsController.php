@@ -20,12 +20,13 @@ class PostsController extends Controller
             'location'=>'required',
             'description' => 'required',
             'budget'=>'required',
+            'contact'=>'contact',
             'image'=>['required', 'image'],
         ]);
 
         //dd(request('image')->store('uploads', 'public'));
         $imagePath = request('image')->store('uploads', 'public');
-        $image = Image::make(public_path("/storage/{$imagePath}"))->fit('1200', '800');
+        $image = Image::make(public_path("/storage/{$imagePath}"))->fit('500', '333');
         $image->save();
 
         auth()->user()->posts()->create([
@@ -33,6 +34,7 @@ class PostsController extends Controller
             'location' => $data['location'],
             'description' => $data['description'],
             'budget' => $data['budget'],
+            'contact'=> $data['contact'],
             'image' => $imagePath,
         ]);
 
